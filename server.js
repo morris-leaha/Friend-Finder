@@ -1,3 +1,4 @@
+// (Adapted from 13.3-HotRestaurant in-class activity)
 // ============ DEPENDENCIES ============
 
 var express = require("express");
