@@ -1,0 +1,23 @@
+{
+  "name": "friend-finder",
+  "version": "1.0.0",
+  "description": "A full-stack compatibility-based \"FriendFinder\" application utilizing Express to handle routing.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/morris-leaha/Friend-Finder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/morris-leaha/Friend-Finder/issues"
+  },
+  "homepage": "https://github.com/morris-leaha/Friend-Finder#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
