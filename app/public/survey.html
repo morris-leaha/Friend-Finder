@@ -19,14 +19,141 @@
     <div class="container" id="main-container">
 
         <header>
-            <h2>Survey Questions</h2>
+            <h1 class="survey-title">Survey</h1>
         </header>
 
-        <section class="main-section">
+        <main>
+            <div class="card">
+                <h4 class="card-header">About You</h4>
+                <div class="card-body">
+                    <label for="name"><strong>Name (required)</strong></label>
+                    <input type="text" id="name" class="form-control txtbox" required>
+                    <label for="photo"><strong>Link to Photo Image (required)</strong></label>
+                    <input type="text" id="photo" class="form-control txtbox" required>
+                </div>
+            </div>
 
-        </section>
+            <!-- QUESTIONS ADAPTED FROM: http://docs.autismresearchcentre.com/tests/FQ.pdf -->
+            <div class="card">
+                <h4 class="card-header">Questions</h4>
+                <div class="card-body">
+                    <label for="q1"><strong>Question 1</strong></label>
+                    <p>The most important thing about a friendship is having somebody to confide in.</p>
+                    <select class="form-control" id="q1">
+                        <option selected>Choose...</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                    <label for="q2"><strong>Question 2</strong></label>
+                    <p>When I talk with friends on the phone, it is usually to make arrangements
+                        rather than to converse</p>
+                    <select class="form-control" id="q2">
+                        <option selected>Choose...</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                    <label for="q3"><strong>Question 3</strong></label>
+                    <p>If I moved to a new area, I would struggle to find new friends on my own. </p>
+                    <select class="form-control" id="q3">
+                        <option selected>Choose...</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                    <label for="q4"><strong>Question 4</strong></label>
+                    <p>If you have to say something critical to a friend, do you just come
+                        right out and say it?</p>
+                    <select class="form-control" id="q4">
+                        <option selected>Choose...</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                    <label for="q5"><strong>Question 5</strong></label>
+                    <p>It's easy to admit when you’re wrong</p>
+                    <select class="form-control" id="q5">
+                        <option selected>Choose...</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                    <label for="q6"><strong>Question 6</strong></label>
+                    <p>If I had to pick, I would rather have a friend who feels the same way
+                        about life as I do, than a friend who enjoys doing the same things as me. </p>
+                    <select class="form-control" id="q6">
+                        <option selected>Choose...</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                    <label for="q7"><strong>Question 7</strong></label>
+                    <p>I tend to think of an activity I want to do and then find somebody to do it
+                        with. </p>
+                    <select class="form-control" id="q7">
+                        <option selected>Choose...</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                    <label for="q8"><strong>Question 8</strong></label>
+                    <p>My friends value me more as someone who is a support to them than as
+                        someone to have fun with. </p>
+                    <select class="form-control" id="q8">
+                        <option selected>Choose...</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                    <label for="q9"><strong>Question 9</strong></label>
+                    <p>You care what others think of you.</p>
+                    <select class="form-control" id="q9">
+                        <option selected>Choose...</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+                    <label for="q10"><strong>Question 10</strong></label>
+                    <p>You believe in astrology</p>
+                    <select class="form-control" id="q10">
+                        <option selected>Choose...</option>
+                        <option value="1">Strongly Disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neutral</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly Agree</option>
+                    </select>
+
+                </div>
+            </div>
+            <div class="nav nav-ques-view">
+                <span><a href="/api/friends" class="ques-links">API Friends List</a> | <a href="https://github.com/afhaque/friendfinder" class="ques-links">GitHub
+                        Repo</a></span>
+            </div>
+        </main>
 
     </div>
+
+
 
     <footer class="footer sticky-footer">
         <div class="container text-center">
@@ -37,7 +164,7 @@
 
 
     <script type="text/javascript">
-    
+
     </script>
 </body>
 
