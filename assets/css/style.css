@@ -1,0 +1,44 @@
+html, body {
+    height: 100%;
+    background: url("../images/friendsphoto.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1 0 auto;
+}
+
+.landing-pg {
+    padding-top: 2rem;
+}
+
+h1 {
+    font-size: 3rem;
+    border-bottom: 2px solid #5b5f68;
+}
+
+.survey-btn-div {
+    margin: 1rem 0;
+}
+
+.survey-btn {
+    color: #fff2e8;
+}
+
+.nav, a:link {
+    color: black;
+}
+
+
+.sticky-footer {
+    flex-shrink: 0;
+    background: none;
+    text-align: center;
+    font-size: 0.65rem;
+}
