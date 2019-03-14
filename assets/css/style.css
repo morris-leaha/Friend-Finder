@@ -20,6 +20,7 @@ body {
 }
 
 .title {
+    font-family: 'Dancing Script', cursive;
     font-size: 3rem;
     border-bottom: 2px solid #5b5f68;
 }
@@ -45,15 +46,29 @@ body {
 }
 
 .survey-title {
+    font-family: 'Poiret One', cursive;
     font-size: 3rem;
+    margin-top: 1rem;
 }
 
 .card {
-    opacity: 0.85;
+    opacity: 0.95;
 }
 
 select, p {
     margin-bottom: 0.5rem;
+}
+
+.user-choice {
+    width: 50%;
+}
+
+.submitSurvey {
+    margin-top:1rem;
+}
+
+.submit-survey-btn {
+    opacity: 1;
 }
 
 .nav-ques-view {

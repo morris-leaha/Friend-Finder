@@ -11,7 +11,11 @@
         crossorigin="anonymous">
     <!-- LINK TO CSS -->
     <link rel="stylesheet" type="text/css" media="screen" href="../../assets/css/style.css" />
+    <!-- LINK TO FONT AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
     <!-- LINK TO GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Poiret+One" rel="stylesheet">
 </head>
 
 <body>
@@ -19,12 +23,12 @@
     <div class="container" id="main-container">
 
         <header>
-            <h1 class="survey-title text-center">Survey</h1>
+            <h1 class="survey-title">SURVEY:</h1>
         </header>
 
         <main>
             <div class="card">
-                <h4 class="card-header">About You</h4>
+                <h5 class="card-header">About You</h5>
                 <div class="card-body">
                     <label for="name"><strong>Name (required)</strong></label>
                     <input type="text" id="name" class="form-control txtbox" required>
@@ -35,11 +39,11 @@
 
             <!-- QUESTIONS ADAPTED FROM: http://docs.autismresearchcentre.com/tests/FQ.pdf -->
             <div class="card">
-                <h4 class="card-header">Questions</h4>
+                <h5 class="card-header">Questions</h5>
                 <div class="card-body">
                     <label for="q1"><strong>Question 1</strong></label>
-                    <p>The most important thing about a friendship is having somebody to confide in.</p>
-                    <select class="form-control" id="q1">
+                    <p>The most important thing about a friendship is having somebody to confide in</p>
+                    <select class="form-control user-choice" id="q1">
                         <option selected>Choose...</option>
                         <option value="1">Strongly Disagree</option>
                         <option value="2">Disagree</option>
@@ -50,7 +54,7 @@
                     <label for="q2"><strong>Question 2</strong></label>
                     <p>When I talk with friends on the phone, it is usually to make arrangements
                         rather than to converse</p>
-                    <select class="form-control" id="q2">
+                    <select class="form-control user-choice" id="q2">
                         <option selected>Choose...</option>
                         <option value="1">Strongly Disagree</option>
                         <option value="2">Disagree</option>
@@ -60,7 +64,7 @@
                     </select>
                     <label for="q3"><strong>Question 3</strong></label>
                     <p>If I moved to a new area, I would struggle to find new friends on my own. </p>
-                    <select class="form-control" id="q3">
+                    <select class="form-control user-choice" id="q3">
                         <option selected>Choose...</option>
                         <option value="1">Strongly Disagree</option>
                         <option value="2">Disagree</option>
@@ -71,7 +75,7 @@
                     <label for="q4"><strong>Question 4</strong></label>
                     <p>If you have to say something critical to a friend, do you just come
                         right out and say it?</p>
-                    <select class="form-control" id="q4">
+                    <select class="form-control user-choice" id="q4">
                         <option selected>Choose...</option>
                         <option value="1">Strongly Disagree</option>
                         <option value="2">Disagree</option>
@@ -81,7 +85,7 @@
                     </select>
                     <label for="q5"><strong>Question 5</strong></label>
                     <p>It's easy to admit when you’re wrong</p>
-                    <select class="form-control" id="q5">
+                    <select class="form-control user-choice" id="q5">
                         <option selected>Choose...</option>
                         <option value="1">Strongly Disagree</option>
                         <option value="2">Disagree</option>
@@ -92,7 +96,7 @@
                     <label for="q6"><strong>Question 6</strong></label>
                     <p>If I had to pick, I would rather have a friend who feels the same way
                         about life as I do, than a friend who enjoys doing the same things as me. </p>
-                    <select class="form-control" id="q6">
+                    <select class="form-control user-choice" id="q6">
                         <option selected>Choose...</option>
                         <option value="1">Strongly Disagree</option>
                         <option value="2">Disagree</option>
@@ -103,7 +107,7 @@
                     <label for="q7"><strong>Question 7</strong></label>
                     <p>I tend to think of an activity I want to do and then find somebody to do it
                         with. </p>
-                    <select class="form-control" id="q7">
+                    <select class="form-control user-choice" id="q7">
                         <option selected>Choose...</option>
                         <option value="1">Strongly Disagree</option>
                         <option value="2">Disagree</option>
@@ -114,7 +118,7 @@
                     <label for="q8"><strong>Question 8</strong></label>
                     <p>My friends value me more as someone who is a support to them than as
                         someone to have fun with. </p>
-                    <select class="form-control" id="q8">
+                    <select class="form-control user-choice" id="q8">
                         <option selected>Choose...</option>
                         <option value="1">Strongly Disagree</option>
                         <option value="2">Disagree</option>
@@ -124,7 +128,7 @@
                     </select>
                     <label for="q9"><strong>Question 9</strong></label>
                     <p>You care what others think of you.</p>
-                    <select class="form-control" id="q9">
+                    <select class="form-control user-choice" id="q9">
                         <option selected>Choose...</option>
                         <option value="1">Strongly Disagree</option>
                         <option value="2">Disagree</option>
@@ -134,7 +138,7 @@
                     </select>
                     <label for="q10"><strong>Question 10</strong></label>
                     <p>You believe in astrology</p>
-                    <select class="form-control" id="q10">
+                    <select class="form-control user-choice" id="q10">
                         <option selected>Choose...</option>
                         <option value="1">Strongly Disagree</option>
                         <option value="2">Disagree</option>
@@ -143,9 +147,9 @@
                         <option value="5">Strongly Agree</option>
                     </select>
 
-                    <div class="submit-survey-btn">
-                        <button type="submit" class="btn btn-secondary" id="submit"><i class="fa fa-check-circle"></i>
-                            Submit</button>
+                    <div class="submitSurvey">
+                        <button type="submit" class="btn btn-secondary submit-survey-btn" id="submit">Submit <i class="far fa-check-circle"></i>
+                        </button>
                     </div>
                 </div>
             </div>
