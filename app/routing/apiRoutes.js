@@ -10,11 +10,14 @@ module.exports = function(app) {
     // a "GET" route to display a JSON of all possible friends
     app.get("/api/friends", function(req, res) {
         res.json(surveyData);
+        console.log("help me!");
     });
 
     // a "POST" route to handle incoming survey results 
     // NOTE: this is also where logic for compatibility will go!
     app.post("/api/friends", function(req, res) {
+
+        console.log(req.body);
 
         // store current user object in variable
         var currentUser = req.body;
