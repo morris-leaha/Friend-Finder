@@ -33,8 +33,26 @@ body {
     color: #fff2e8;
 }
 
-.nav, a:link {
+.survey-btn:hover {
+    color: #fff2e8;
+}
+
+.survey-btn:active {
+    transform: translateY(2px);
+}
+
+.nav a:link {
     color: black;
+}
+
+.nav a:hover {
+    color: #fff2e8;
+    text-decoration: none;
+}
+
+.nav a:active {
+    color: #fff2e8;
+    text-decoration: none;
 }
 
 .card {
@@ -52,7 +70,7 @@ body {
 }
 
 .card {
-    opacity: 0.95;
+    background-color: rgba(254, 254, 253, 0.95);
 }
 
 select, p {
@@ -67,16 +85,16 @@ select, p {
     margin-top:1rem;
 }
 
-.submit-survey-btn {
-    opacity: 1;
-}
-
 .nav-ques-view {
-    color: white;
+    color: #fff2e8;
 }
 
-.ques-links:link {
-    color: white;
+.nav-ques-view a:link{
+    color: #fff2e8;
+}
+
+.nav-ques-view a:hover {
+    color: #5b5f68;
 }
 
 .sticky-footer {
@@ -84,5 +102,5 @@ select, p {
     background: none;
     text-align: center;
     font-size: 0.65rem;
-    color: white;
+    color: #fff2e8;
 }
