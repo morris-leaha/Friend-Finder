@@ -9,6 +9,8 @@
     <!-- LINK TO BOOTSTRAP (REMOVES NEED FOR RESET CSS) -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
+    <!-- LINK TO jQUERY -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- LINK TO CSS -->
     <link rel="stylesheet" type="text/css" media="screen" href="../../assets/css/style.css" />
     <!-- LINK TO FONT AWESOME -->
@@ -27,7 +29,9 @@
         </header>
 
         <main>
+            <!-- User Information -->
             <div class="card">
+
                 <h5 class="card-header">About You</h5>
                 <div class="card-body">
                     <label for="name"><strong>Name (required)</strong></label>
@@ -147,19 +151,45 @@
                         <option value="5">Strongly Agree</option>
                     </select>
 
+                    <!-- Submit Button -->
                     <div class="submitSurvey">
-                        <button type="submit" class="btn btn-secondary submit-survey-btn" id="submit">Submit <i class="far fa-check-circle"></i>
+                        <button type="submit" class="btn btn-secondary submit-survey-btn" id="submit" data-toggle="modal"
+                            data-target="#matchModal">Submit <i class="far fa-check-circle"></i>
                         </button>
                     </div>
                 </div>
             </div>
 
+            <!-- Modal -->
+            <div class="modal fade" id="matchModal" tabindex="-1" role="dialog" aria-labelledby="matchPopUp"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="matchPopUp">Your Friend Match</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- Display Match Name -->
+                            <h2 id="match-name"></h2>
+                            <!-- Display Match Photo -->
+                            <img id="match-img" alt="">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div class="nav nav-ques-view">
                 <span><a href="/api/friends" class="ques-links">API Friends List</a> | <a href="https://github.com/morris-leaha/Friend-Finder"
                         class="ques-links">GitHub
                         Repo</a></span>
             </div>
+
         </main>
 
     </div>
@@ -175,6 +205,89 @@
 
 
     <script type="text/javascript">
+
+        $(".submit-survey-btn").on("click", function (event) {
+            // Prevent default submit functionality
+            event.preventDefault();
+
+            // Form validation function
+            function validate() {
+
+                var isValid = true;
+
+                $(".txtbox").each(function () {
+                    if ($(this).val() === "") {
+                        isValid = false;
+                    } 
+                    
+                    return isValid;
+                
+                });
+
+                $(".user-choice").each(function () {
+                    if ($(this).val() === "") {
+                        isValid = false;
+                    } 
+                    
+                    return isValid;
+                
+                });
+
+            }
+
+            // If form is validated, then...
+            if (validate()) {
+                // Grab user information & store as object:
+                var newUser = {
+                    name: $("#name").val().trim(),
+                    photo: $("#photo").val().trim(),
+                    scores: [
+                        $("#q1").val().trim(),
+                        $("#q2").val().trim(),
+                        $("#q3").val().trim(),
+                        $("#q4").val().trim(),
+                        $("#q5").val().trim(),
+                        $("#q6").val().trim(),
+                        $("#q7").val().trim(),
+                        $("#q8").val().trim(),
+                        $("#q9").val().trim(),
+                        $("#q10").val().trim(),
+                    ]
+                };
+
+                console.log(newUser);
+
+                // AJAX post to friends.js / friends data / friends API
+                $.post("/api/tables", newUser, 
+
+                    // Callback function to grab their "best match" info
+                    function (match) {
+                    
+                    // Display Match Name & Photo
+                    $("#match-name").html("<h2>" + match.name + "</h2>");
+                    $("#match-img").attr("src", match.photo);
+
+                    // Toggle Modal per Bootstrap instructions
+                    $("#matchModal").modal("toggle");
+
+                    // Clear form
+                    $("#name").val("");
+                    $("#photo").val("");
+                    $("#q1").val("");
+                    $("#q2").val("");
+                    $("#q3").val("");
+                    $("#q4").val("");
+                    $("#q5").val("");
+                    $("#q6").val("");
+                    $("#q7").val("");
+                    $("#q8").val("");
+                    $("#q9").val("");
+                    $("#q10").val("");
+                });
+            } else {
+                alert("Please fill out all fields before submitting!");
+            }
+        });
 
     </script>
 </body>
