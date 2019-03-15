@@ -263,13 +263,11 @@
                 $.post("/api/friends", newUser,
 
                     // Callback function to grab their "best match" info
-                    function (match) {
-
-                        console.log(match);
+                    function (data) {
 
                         // Display Match Name & Photo
-                        $("#match-name").html("<h2>" + match.name + "</h2>");
-                        $("#match-img").attr("src", match.photo);
+                        $("#match-name").html("<h2>" + data.name + "</h2>");
+                        $("#match-img").attr("src", data.photo);
 
                         // Toggle Modal per Bootstrap instructions
                         $("#matchModal").modal("toggle");

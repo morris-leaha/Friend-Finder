@@ -22,11 +22,11 @@ module.exports = function (app) {
         var currentUser = req.body;
         var bestMatch = {};
         var bestScore = 100;
-        var totalDiff = 0;
+
 
         // loop over all users
         for (var i = 0; i < surveyData.length; i++) {
-
+            var totalDiff = 0;
             // loop over current user scores to compare with other user scores
             for (var j = 0; j < currentUser.scores.length; j++) {
                 totalDiff += Math.abs(currentUser.scores[j] - surveyData[i].scores[j]);
