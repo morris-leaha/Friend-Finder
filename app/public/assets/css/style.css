@@ -35,14 +35,21 @@ body {
 
 .survey-btn:hover {
     color: #fff2e8;
+    transform: translateY(2px);
 }
 
 .survey-btn:active {
-    transform: translateY(2px);
+    transform: translateY(4px);
 }
 
 .nav a:link {
     color: black;
+    text-decoration: none;
+}
+
+.nav a:visited {
+    color: black;
+    text-decoration: none;
 }
 
 .nav a:hover {
@@ -91,10 +98,22 @@ select, p {
 
 .nav-ques-view a:link{
     color: #fff2e8;
+    text-decoration: none;
+}
+
+.nav-ques-view a:visited{
+    color: #fff2e8;
+    text-decoration: none;
 }
 
 .nav-ques-view a:hover {
-    color: #5b5f68;
+    color: black;
+    text-decoration: none;
+}
+
+.nav-ques-view a:active{
+    color: black;
+    text-decoration: none;
 }
 
 .sticky-footer {
