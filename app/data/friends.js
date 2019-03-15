@@ -19,6 +19,22 @@ var friendArray = [
             4,
             1
           ]
+      },
+      {
+        "name":"Chloe",
+        "photo":"https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80",
+        "scores":[
+            5,
+            2,
+            3,
+            4,
+            4,
+            4,
+            2,
+            3,
+            2,
+            5
+          ]
       }      
 ];
 
