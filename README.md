@@ -23,6 +23,3 @@ This app is deployed using Heroku.  Take the quick survey <a href="https://frien
 <a href="https://nodejs.org/en/">Node.js</a><br>
 <a href="https://www.npmjs.com/package/express">Express.js</a><br>
 <a href="https://www.npmjs.com/package/path">Path</a>
-
-
-
